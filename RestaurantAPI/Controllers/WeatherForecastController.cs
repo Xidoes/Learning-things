@@ -32,7 +32,7 @@ namespace RestaurantAPI.Controllers
         {
             if (count < 0 || request.max < request.min)
             {
-                return BadRequest($"Error");
+                return BadRequest();
             }
             var result = _service.Get(count, request.min, request.max);
             return Ok(result);
